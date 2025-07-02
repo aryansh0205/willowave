@@ -25,7 +25,7 @@ const ContactPage = () => {
 
   const sendMessage = async () => {
     if (!name.trim() || !msg.trim()) {
-      toast.error("Name and message are required.");
+      // toast.error("Name and message are required.");
       return;
     }
 
@@ -45,7 +45,8 @@ const ContactPage = () => {
         localStorage.setItem("QOC", "true");
       }
     } catch (error) {
-      toast.error("Something went wrong. Please try again.");
+      // toast.error("Something went wrong. Please try again.");
+      console.log(error);
     }
     setLoading(false);
   };
